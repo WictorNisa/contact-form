@@ -1,0 +1,363 @@
+@import url(/assets/fonts/Karla-Italic-VariableFont_wght.ttf);
+@import url(/assets/fonts/Karla-VariableFont_wght.ttf);
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+    8. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+#root {
+  /* ## Colors */
+
+  /* ### Primary */
+  --Green200lighter: hsl(148, 38%, 91%);
+  --Green600medium: hsl(169, 82%, 27%);
+  --Red: hsl(0, 66%, 54%);
+
+  /* ### Neutral */
+
+  --White: hsl(0, 0%, 100%);
+  --Grey500: hsl(186, 15%, 59%);
+  --Grey900: hsl(187, 24%, 22%);
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  font-weight: lighter;
+}
+
+.bg {
+  width: 100%;
+  background-color: hsl(148, 38%, 91%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form-wrapper {
+  height: 60%;
+  width: 90%;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+  margin: auto auto 2rem auto;
+}
+
+.contact-form-wrapper h1 {
+  margin: auto;
+  padding: 1rem 0 0.5rem 0;
+  font-size: 2rem;
+  width: 90%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  width: 90%;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid hsl(186, 15%, 59%);
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+label {
+  font-size: 1.2rem;
+  padding: 0.5rem 0 0.5rem 0;
+  text-align: left;
+  width: 90%;
+}
+
+.type-p {
+  width: 90%;
+  text-align: left;
+  font-size: 1.2rem;
+  padding: 0.5rem 0 0.5rem 0;
+}
+
+.radio-card {
+  height: 50px;
+  width: 90%;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid hsl(186, 15%, 59%);
+  border-radius: 10px;
+}
+
+.radio-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.name-card {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.name-field {
+  width: 90%;
+}
+
+.name-field label {
+  margin-bottom: 5px;
+  font-weight: lighter;
+}
+
+.name-field input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+}
+
+.radio-card label {
+  padding: 0;
+  margin: auto;
+}
+
+input[type="radio"] {
+  height: 25px;
+  margin: auto 1rem auto 1rem;
+  width: 20%;
+}
+
+textarea {
+  width: 90%;
+  border: 1px solid hsl(186, 15%, 59%);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.checkbox-card {
+  margin: 2rem auto;
+  width: 90%;
+  height: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.checkbox-card label {
+  margin: auto;
+}
+
+input#check {
+  height: 20px;
+  width: 20%;
+  margin: auto;
+}
+
+input[type="submit"] {
+  background-color: hsl(169, 82%, 27%);
+  color: white;
+  transition: 0.5s ease;
+}
+input[type="submit"]:hover {
+  background-color: hsl(169, 82%, 10%);
+}
+
+span {
+  color: green;
+}
+
+.valid {
+  border-color: 2px solid green;
+}
+
+.error-text {
+  width: 90%;
+  text-align: left;
+  color: hsl(0, 66%, 54%);
+  font-weight: normal;
+}
+
+.invalid {
+  border-color: hsl(0, 66%, 54%);
+}
+
+.valid {
+  border: 2px solid hsl(169, 82%, 27%);
+}
+
+input:hover {
+  cursor: pointer;
+  border: 2px solid hsl(169, 82%, 27%);
+}
+
+.textarea-error {
+  margin-top: 1rem;
+}
+
+.modal {
+  background-color: hsl(187, 24%, 22%);
+  margin: 1rem auto 0 auto;
+  width: 90%;
+  height: 100px;
+  border-radius: 10px;
+  color: white;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  animation: showModal 1s linear 0.5s;
+}
+
+@keyframes showModal {
+  from {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.confirmation-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 1rem;
+}
+
+.modal-logo {
+  max-width: 5%;
+  margin-right: 1rem;
+}
+#modal-message {
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* Media queries */
+
+@media only screen and (min-width: 900px) {
+  .contact-form-wrapper {
+    width: 50%;
+    height: 50%;
+  }
+
+  .name-card {
+    display: flex;
+    flex-direction: row;
+    gap: 1.1rem;
+    width: 90%;
+    margin-bottom: 1.1rem;
+  }
+
+  .name-field {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .name-field label {
+    margin-bottom: 5px;
+  }
+
+  .name-field input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+  }
+
+  .radio-wrapper {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .radio-card {
+    width: 42%;
+    margin: 1rem;
+  }
+
+  textarea {
+    height: 160px;
+  }
+
+  input#check {
+    width: 5%;
+  }
+
+  .modal {
+    width: 40%;
+  }
+}
